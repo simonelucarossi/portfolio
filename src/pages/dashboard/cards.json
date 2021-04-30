@@ -1,0 +1,15 @@
+{
+    "cards" : 
+        [
+            {
+                "imageUrl": "https://marketingtwentyone.co.uk/wp-content/uploads/2018/03/Introduction-BL.png",
+                "title": "</> Introduzione",
+                "description": "Avendo passato maggior parte della mia infanzia circondato da gadget di ultima (ora non proprio ultima) generazione, che mio padre amava riparare, ho sempre amato la tecnologia. Questo è ciò che mi ha spinto a studiare Computer Science all’università, e ad intraprendere la strada del blogging, creando centinaia di guide e tutorial per la community tech online. Attualmente, sono un giovane professionista emergente, ansioso di continuare a sviluppare le mie capacità, comprendendo che questo è un settore in continua evoluzione. Sono sempre alla ricerca di nuove sfide, che confronto con intuizione e dedizione. Infine, seppur avendo accumulato molta esperienza lavorando autonomamente, trovo che i migliori successi siano frutto della  stretta collaborazione di un team affiatato."
+            },
+            {
+                "imageUrl": "https://marketingtwentyone.co.uk/wp-content/uploads/2018/03/Introduction-BL.png",
+                "title": "</> Lingue",
+                "description": "Inglese. Flag: Italy on OpenMoji 13.0 Buona capacità nella comprensione del testo inglese e di comprensione durante un dialogo; buona capacità di scrittura e formazione di frasi anche complesse; discreta capacità nel parlare in modo sciolto la lingua. Esperienza complementare: convivenza prolungata e dialogo diretto con una persona madrelingua di nazionalità inglese."
+            }
+        ]
+}
