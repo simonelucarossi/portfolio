@@ -18,7 +18,9 @@ const Dashboard = () => {
             <div className="page-container">
 
                <div className="up-container">
-                   Welcome on my site!
+                   <div className="top-bar-menu"> 
+                        Facebook Twitter LinkedIn Blog
+                   </div>
                </div>
                <div className="profile-picture-container">
                    <img 
@@ -31,24 +33,23 @@ const Dashboard = () => {
                    }} src="https://media-exp1.licdn.com/dms/image/C4D03AQEdPG5RQBzwVg/profile-displayphoto-shrink_800_800/0/1611221032606?e=1625097600&v=beta&t=mLnYGhlgYsknj0XH94xgPBUcDdkXzmECa_p46oaA8mg"/>
                </div>
                <div style={{
-                       minWidth: '100vw',
+                       minWidth: '99vw',
                        height: '3px',
                        marginBottom: '70px',
                        backgroundColor: 'black',
                        marginTop: '-68px',
                }}></div>
                <div style={{
-                       minWidth: '100vw',
+                       minWidth: '99vw',
                        height: '3px',
                        marginBottom: '70px',
                        backgroundColor: '#e9e9e9',
                        marginTop: '-64px',
                }}></div>
-               <div style={{ display: 'flex', width: '100vw', marginTop: '25px'}}>
+               <div style={{ display: 'flex', width: '99vw', marginTop: '25px'}}>
                    <div style={{ display: 'flex', margin: 'auto'}}>
                    <Tab name="Introduzione" 
                             className="Test" 
-                         
                             height="20" 
                             borderColor="black" 
                             active={activeTab === 0}
@@ -66,10 +67,11 @@ const Dashboard = () => {
                             { activeProject === 0 ?
                                 (
                                     <>
-                                        <Col>
-                                            <IoArrowBack className="arrow-icon" onClick={() => setActiveProject(activeProject - 1)}></IoArrowBack>
-                                        </Col>
-                                        <div className="cardContainer">    
+                                        
+                                        <div className="cardContainer"> 
+                                            <Col style={{ marginRight: '45px', marginLeft: '-45px'}}>
+                                                <IoArrowBack className="arrow-icon" onClick={() => setActiveProject(activeProject - 1)}></IoArrowBack>
+                                            </Col>   
                                             <Col className="img-container">
                                                 {<img className="card-img" src={`${cards.cards[0].imageUrl}`}/>}
                                             </Col>
@@ -87,22 +89,24 @@ const Dashboard = () => {
                                                     <FontAwesomeIcon icon={faLink}/>}/>
                                                 </Row>
                                             </Col>
+                                            <Col style={{ marginRight: '-45px', marginLeft: '20px'}}>
+                                                <IoArrowForward className="arrow-icon" onClick={() => setActiveProject(activeProject + 1)}></IoArrowForward>
+                                            </Col>
                                         </div>
-                                        <Col>
-                                            <IoArrowForward className="arrow-icon" onClick={() => setActiveProject(activeProject + 1)}></IoArrowForward>
-                                        </Col>
+                                        
                                     </>
                                 ) : ''
                             }
                             { activeProject === 1 ?
                                 (
                                     <>
-                                        <Col>
-                                            <IoArrowBack className="arrow-icon" onClick={() => setActiveProject(activeProject - 1)}></IoArrowBack>
-                                        </Col>
-                                        <div className="cardContainer">    
+                                        
+                                        <div className="cardContainer"> 
+                                            <Col style={{ marginRight: '45px', marginLeft: '-45px'}}>
+                                                <IoArrowBack className="arrow-icon" onClick={() => setActiveProject(activeProject - 1)}></IoArrowBack>
+                                            </Col>   
                                             <Col className="img-container">
-                                                {<img className="card-img" src={`${cards.cards[0].imageUrl}`}/>}
+                                                {<img className="card-img" src={`${cards.cards[1].imageUrl}`}/>}
                                             </Col>
                                             <Col className="body-container">
                                                 <Row className="title-container">
@@ -118,10 +122,11 @@ const Dashboard = () => {
                                                     <FontAwesomeIcon icon={faLink}/>}/>
                                                 </Row>
                                             </Col>
+                                            <Col style={{ marginRight: '-45px', marginLeft: '20px'}}>
+                                                <IoArrowForward className="arrow-icon" onClick={() => setActiveProject(activeProject + 1)}></IoArrowForward>
+                                            </Col>
                                         </div>
-                                        <Col>
-                                            <IoArrowForward className="arrow-icon" onClick={() => setActiveProject(activeProject + 1)}></IoArrowForward>
-                                        </Col>
+                                        
                                     </>
                                 ) : ''
                             }
