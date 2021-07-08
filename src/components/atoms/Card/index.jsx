@@ -5,7 +5,7 @@ import Button from '../Button';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCodeBranch, faLink } from "@fortawesome/free-solid-svg-icons";
 
-export const Card = ({ image, title, description }) => {
+export const Card = ({ image, title, subtitle, dates, description }) => {
 
     return (    
         <>
@@ -16,6 +16,13 @@ export const Card = ({ image, title, description }) => {
                 <Row className="title-container">
                     {title}
                 </Row>
+                {
+                    subtitle && dates ? (
+                        <Row className="subtitle-container">
+                            <p className="subtitle">{subtitle}</p> <b>/</b> <p className="subtitle-dates">{dates}</p>
+                        </Row>
+                    ) : ''
+                }
                 <Row>
                     {description}
                 </Row>
@@ -40,6 +47,8 @@ Card.propTypes = {
     image: PropTypes.string,
     title: PropTypes.string,
     description: PropTypes.string,
+    subtitle: PropTypes.string,
+    dates: PropTypes.string,
 };
 
 export default Card;

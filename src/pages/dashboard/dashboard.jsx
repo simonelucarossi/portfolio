@@ -10,6 +10,7 @@ import LoaderSpinner from '../../components/components/LoaderSpinner'
 const Dashboard = () => {
     const [activeTab, setActiveTab] = useState(0);
     const [activeIntroduction, setActiveIntroduction] = useState(0);
+    const [activeExperiences, setActiveExperiences] = useState(0);
     return (
         (
             <div className="page-container">
@@ -54,9 +55,9 @@ const Dashboard = () => {
                         <div className="cardsContainer"> 
                                     <>
                                         <CardsSlider 
-                                            cards={cards.experiences} activeCard={activeIntroduction} 
-                                            backFunction={() => setActiveIntroduction(activeIntroduction - 1)}
-                                            forwardFunction={() => setActiveIntroduction(activeIntroduction + 1)}
+                                            cards={cards.experiences} activeCard={activeExperiences} 
+                                            backFunction={() => setActiveExperiences(activeExperiences - 1)}
+                                            forwardFunction={() => setActiveExperiences(activeExperiences + 1)}
                                         />
                                     </>
                         </div>
@@ -68,9 +69,9 @@ const Dashboard = () => {
                         <div className="cardsContainer"> 
                                     <>
                                         <CardsSlider 
-                                            cards={cards.projects} activeCard={activeIntroduction} 
-                                            backFunction={() => setActiveIntroduction(activeIntroduction - 1)}
-                                            forwardFunction={() => setActiveIntroduction(activeIntroduction + 1)}
+                                            cards={cards.projects} activeCard={activeExperiences} 
+                                            backFunction={() => setActiveExperiences(activeExperiences - 1)}
+                                            forwardFunction={() => setActiveExperiences(activeExperiences + 1)}
                                         />
                                     </>
                         </div>

@@ -102,3 +102,22 @@
         margin-top: -50px;
         margin-left: -50px;
 }
+
+.subtitle-dates {
+    color: #cecece;
+    font-family: sans-serif;
+    margin-left: 5px;
+}
+
+.subtitle {
+    color: #acacac;
+    font-weight: bold;
+    font-family: sans-serif;
+    margin-right: 5px;
+}
+
+.subtitle-container {
+    margin-top: -20px;
+    margin-bottom: 20px;
+    display: flex;
+}

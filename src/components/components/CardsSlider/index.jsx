@@ -22,7 +22,8 @@ export const CardsSlider = ({ cards, backFunction, forwardFunction, activeCard})
                     )
                 } 
                  
-                <Card title={cards[activeCard].title} image={cards[activeCard].imageUrl} description={cards[activeCard].description}/>
+                <Card title={cards[activeCard].title} image={cards[activeCard].imageUrl} description={cards[activeCard].description}
+                    subtitle={cards[activeCard].subtitle} dates={cards[activeCard].dates}/>
                 
                 
                 {
