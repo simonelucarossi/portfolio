@@ -1,52 +1,25 @@
 import React, { useState } from 'react';
 import { propTypes } from 'react-bootstrap/esm/Image';
 import { Tab } from '../../components/atoms/Tab';
-import { IoArrowBack, IoArrowForward } from "react-icons/io5";
-import { style } from './dashboard.css';
+import * as style from './dashboard.css';
 import { Col, Row } from 'react-bootstrap';
 import cards from './cards.json'
-import Button from '../../components/atoms/Button';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCodeBranch, faLink } from "@fortawesome/free-solid-svg-icons";
+import CardsSlider from '../../components/components/CardsSlider';
+import LoaderSpinner from '../../components/components/LoaderSpinner'
 
 const Dashboard = () => {
     const [activeTab, setActiveTab] = useState(0);
-    const [activeProject, setActiveProject] = useState(0);
-
+    const [activeIntroduction, setActiveIntroduction] = useState(0);
     return (
         (
             <div className="page-container">
-
+                <LoaderSpinner></LoaderSpinner>
                <div className="up-container">
                    <div className="top-bar-menu"> 
                         Facebook Twitter LinkedIn Blog
                    </div>
                </div>
-               <div className="profile-picture-container">
-                   <img 
-                   alt="profile"
-                   style={{
-                       maxHeight: '150px',
-                       maxWidth: '150px',
-                       border: '2px solid rgb(240 240 240 / 97%)',
-                       borderRadius: '5000px'
-                   }} src="https://media-exp1.licdn.com/dms/image/C4D03AQEdPG5RQBzwVg/profile-displayphoto-shrink_800_800/0/1611221032606?e=1625097600&v=beta&t=mLnYGhlgYsknj0XH94xgPBUcDdkXzmECa_p46oaA8mg"/>
-               </div>
-               <div style={{
-                       minWidth: '99vw',
-                       height: '3px',
-                       marginBottom: '70px',
-                       backgroundColor: 'black',
-                       marginTop: '-68px',
-               }}></div>
-               <div style={{
-                       minWidth: '99vw',
-                       height: '3px',
-                       marginBottom: '70px',
-                       backgroundColor: '#e9e9e9',
-                       marginTop: '-64px',
-               }}></div>
-               <div style={{ display: 'flex', width: '99vw', marginTop: '25px'}}>
+               <div style={{ display: 'flex', width: '99vw', marginTop: '15px', marginBottom: '-30px'}}>
                    <div style={{ display: 'flex', margin: 'auto'}}>
                    <Tab name="Introduzione" 
                             className="Test" 
@@ -58,78 +31,48 @@ const Dashboard = () => {
                     <Tab name="Esperienze" className="Test" height="20" borderColor="black" active={activeTab === 1} onClick={() =>setActiveTab(1)}/>
                     <Tab name="Progetti" className="Test" height="20" borderColor="black" active={activeTab === 2} onClick={() =>setActiveTab(2)}/>
                     <Tab name="Competenze" className="Test" height="20" borderColor="black" active={activeTab === 3} onClick={() =>setActiveTab(3)}/>
+                    <Tab name="Contattami" className="Test" height="20" borderColor="black" active={activeTab === 4} onClick={() =>setActiveTab(4)}/>
                    </div>
                 </div>
                 {
                     activeTab === 0 ?
                     (
                         <div className="cardsContainer"> 
-                            { activeProject === 0 ?
-                                (
                                     <>
-                                        
-                                        <div className="cardContainer"> 
-                                            <Col style={{ marginRight: '45px', marginLeft: '-45px'}}>
-                                                <IoArrowBack className="arrow-icon" onClick={() => setActiveProject(activeProject - 1)}></IoArrowBack>
-                                            </Col>   
-                                            <Col className="img-container">
-                                                {<img className="card-img" src={`${cards.cards[0].imageUrl}`}/>}
-                                            </Col>
-                                            <Col className="body-container">
-                                                <Row className="title-container">
-                                                    {cards.cards[0].title}
-                                                </Row>
-                                                <Row>
-                                                    {cards.cards[0].description}
-                                                </Row>
-                                                <Row className="buttons-container">
-                                                    <Button name="Vedi su GitHub" icon={
-                                                    <FontAwesomeIcon icon={faCodeBranch}/>}/>
-                                                    <Button name="Visita sito web" icon={
-                                                    <FontAwesomeIcon icon={faLink}/>}/>
-                                                </Row>
-                                            </Col>
-                                            <Col style={{ marginRight: '-45px', marginLeft: '20px'}}>
-                                                <IoArrowForward className="arrow-icon" onClick={() => setActiveProject(activeProject + 1)}></IoArrowForward>
-                                            </Col>
-                                        </div>
-                                        
+                                        <CardsSlider 
+                                            cards={cards.introductions} activeCard={activeIntroduction} 
+                                            backFunction={() => setActiveIntroduction(activeIntroduction - 1)}
+                                            forwardFunction={() => setActiveIntroduction(activeIntroduction + 1)}
+                                        />
                                     </>
-                                ) : ''
-                            }
-                            { activeProject === 1 ?
-                                (
+                        </div>
+                    ) : ''
+                }
+                {
+                    activeTab === 1 ?
+                    (
+                        <div className="cardsContainer"> 
                                     <>
-                                        
-                                        <div className="cardContainer"> 
-                                            <Col style={{ marginRight: '45px', marginLeft: '-45px'}}>
-                                                <IoArrowBack className="arrow-icon" onClick={() => setActiveProject(activeProject - 1)}></IoArrowBack>
-                                            </Col>   
-                                            <Col className="img-container">
-                                                {<img className="card-img" src={`${cards.cards[1].imageUrl}`}/>}
-                                            </Col>
-                                            <Col className="body-container">
-                                                <Row className="title-container">
-                                                    {cards.cards[1].title}
-                                                </Row>
-                                                <Row>
-                                                    {cards.cards[1].description}
-                                                </Row>
-                                                <Row className="buttons-container">
-                                                    <Button name="Vedi su GitHub" icon={
-                                                    <FontAwesomeIcon icon={faCodeBranch}/>}/>
-                                                    <Button name="Visita sito web" icon={
-                                                    <FontAwesomeIcon icon={faLink}/>}/>
-                                                </Row>
-                                            </Col>
-                                            <Col style={{ marginRight: '-45px', marginLeft: '20px'}}>
-                                                <IoArrowForward className="arrow-icon" onClick={() => setActiveProject(activeProject + 1)}></IoArrowForward>
-                                            </Col>
-                                        </div>
-                                        
+                                        <CardsSlider 
+                                            cards={cards.experiences} activeCard={activeIntroduction} 
+                                            backFunction={() => setActiveIntroduction(activeIntroduction - 1)}
+                                            forwardFunction={() => setActiveIntroduction(activeIntroduction + 1)}
+                                        />
                                     </>
-                                ) : ''
-                            }
+                        </div>
+                    ) : ''
+                }
+                {
+                    activeTab === 2 ?
+                    (
+                        <div className="cardsContainer"> 
+                                    <>
+                                        <CardsSlider 
+                                            cards={cards.projects} activeCard={activeIntroduction} 
+                                            backFunction={() => setActiveIntroduction(activeIntroduction - 1)}
+                                            forwardFunction={() => setActiveIntroduction(activeIntroduction + 1)}
+                                        />
+                                    </>
                         </div>
                     ) : ''
                 }

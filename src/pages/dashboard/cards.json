@@ -1,5 +1,5 @@
 {
-    "cards" : 
+    "introductions" : 
         [
             {
                 "imageUrl": "https://marketingtwentyone.co.uk/wp-content/uploads/2018/03/Introduction-BL.png",
@@ -9,7 +9,48 @@
             {
                 "imageUrl": "https://marketingtwentyone.co.uk/wp-content/uploads/2018/03/Introduction-BL.png",
                 "title": "Lingue",
-                "description": "Inglese. Flag: Italy on OpenMoji 13.0 Buona capacità nella comprensione del testo inglese e di comprensione durante un dialogo; buona capacità di scrittura e formazione di frasi anche complesse; discreta capacità nel parlare in modo sciolto la lingua. Esperienza complementare: convivenza prolungata e dialogo diretto con una persona madrelingua di nazionalità inglese."
+                "description": "Inglese.\nFlag: Italy on OpenMoji 13.0 Buona capacità nella comprensione del testo inglese e di comprensione durante un dialogo; buona capacità di scrittura e formazione di frasi anche complesse; discreta capacità nel parlare in modo sciolto la lingua. Esperienza complementare: convivenza prolungata e dialogo diretto con una persona madrelingua di nazionalità inglese."
+            },
+            {
+                "imageUrl": "https://marketingtwentyone.co.uk/wp-content/uploads/2018/03/Introduction-BL.png",
+                "title": "Formazione",
+                "description": "Test"
+            }
+        ],
+    "experiences" : 
+        [
+            {
+                "imageUrl": "https://miro.medium.com/max/1400/0*zxAQRSal8s7mZW5j.png",
+                "title": "Esperienza 1",
+                "description": "Avendo passato maggior parte della mia infanzia circondato da gadget di ultima (ora non proprio ultima) generazione, che mio padre amava riparare, ho sempre amato la tecnologia. Questo è ciò che mi ha spinto a studiare Computer Science all’università, e ad intraprendere la strada del blogging, creando centinaia di guide e tutorial per la community tech online. Attualmente, sono un giovane professionista emergente, ansioso di continuare a sviluppare le mie capacità, comprendendo che questo è un settore in continua evoluzione. Sono sempre alla ricerca di nuove sfide, che confronto con intuizione e dedizione. Infine, seppur avendo accumulato molta esperienza lavorando autonomamente, trovo che i migliori successi siano frutto della  stretta collaborazione di un team affiatato."
+            },
+            {
+                "imageUrl": "https://qontinual.com/wp-content/uploads/2020/09/Qontinual-LOGO-with-text-1.png",
+                "title": "Esperienza 2",
+                "description": "Inglese.\nFlag: Italy on OpenMoji 13.0 Buona capacità nella comprensione del testo inglese e di comprensione durante un dialogo; buona capacità di scrittura e formazione di frasi anche complesse; discreta capacità nel parlare in modo sciolto la lingua. Esperienza complementare: convivenza prolungata e dialogo diretto con una persona madrelingua di nazionalità inglese."
+            },
+            {
+                "imageUrl": "https://media-exp1.licdn.com/dms/image/C4D1BAQGLKmgrjp1XMw/company-background_10000/0/1585750156142?e=2159024400&v=beta&t=14NkU3ZSgqlkifXuWLMxNSTPqXX_OATW4hkwSTxWiVo",
+                "title": "Esperienza 3",
+                "description": "Test"
+            }
+        ],
+    "projects" : 
+        [
+            {
+                "imageUrl": "https://marketingtwentyone.co.uk/wp-content/uploads/2018/03/Introduction-BL.png",
+                "title": "Progetto 1",
+                "description": "Avendo passato maggior parte della mia infanzia circondato da gadget di ultima (ora non proprio ultima) generazione, che mio padre amava riparare, ho sempre amato la tecnologia. Questo è ciò che mi ha spinto a studiare Computer Science all’università, e ad intraprendere la strada del blogging, creando centinaia di guide e tutorial per la community tech online. Attualmente, sono un giovane professionista emergente, ansioso di continuare a sviluppare le mie capacità, comprendendo che questo è un settore in continua evoluzione. Sono sempre alla ricerca di nuove sfide, che confronto con intuizione e dedizione. Infine, seppur avendo accumulato molta esperienza lavorando autonomamente, trovo che i migliori successi siano frutto della  stretta collaborazione di un team affiatato."
+            },
+            {
+                "imageUrl": "https://marketingtwentyone.co.uk/wp-content/uploads/2018/03/Introduction-BL.png",
+                "title": "Progetto 2",
+                "description": "Inglese.\nFlag: Italy on OpenMoji 13.0 Buona capacità nella comprensione del testo inglese e di comprensione durante un dialogo; buona capacità di scrittura e formazione di frasi anche complesse; discreta capacità nel parlare in modo sciolto la lingua. Esperienza complementare: convivenza prolungata e dialogo diretto con una persona madrelingua di nazionalità inglese."
+            },
+            {
+                "imageUrl": "https://marketingtwentyone.co.uk/wp-content/uploads/2018/03/Introduction-BL.png",
+                "title": "Progetto 3",
+                "description": "Test"
             }
         ]
 }
