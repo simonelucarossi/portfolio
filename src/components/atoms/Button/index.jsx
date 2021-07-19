@@ -6,8 +6,8 @@ export const Button = ({ name, className, onClick, width, height, borderColor, i
 
     return (
         <>
-            <ButtonContainer className={className} onClick={onClick} width={width} height={height} borderColor={borderColor}>
-                <div className="buttonContainer">
+            <ButtonContainer className={className} width={width} height={height} borderColor={borderColor}>
+                <div className="buttonContainer" onClick={onClick}>
                     { icon?
                         (icon) : ''
                     }

@@ -23,7 +23,8 @@ export const CardsSlider = ({ cards, backFunction, forwardFunction, activeCard})
                 } 
                  
                 <Card title={cards[activeCard].title} image={cards[activeCard].imageUrl} description={cards[activeCard].description}
-                    subtitle={cards[activeCard].subtitle} dates={cards[activeCard].dates}/>
+                    subtitle={cards[activeCard].subtitle} dates={cards[activeCard].dates} place={cards[activeCard].place}
+                        gitHub={cards[activeCard].gitHub} site={cards[activeCard].site}/>
                 
                 
                 {

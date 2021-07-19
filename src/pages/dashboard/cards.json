@@ -22,105 +22,146 @@
             {
                 "imageUrl": "https://miro.medium.com/max/1400/0*zxAQRSal8s7mZW5j.png",
                 "title": "EnelX JNH Project",
-                "description": "",
+                "description": "Progetto su cui lavoro da mesi come team leader per un cliente esterno (Enel) per conto di Qontinual. Il progetto è sviluppato con ReactJS ed i vari linguaggi di markup.",
                 "subtitle": "Front-end Team Leader",
-                "dates": "10/11/20 - Presente"
+                "dates": "10/11/20 - Presente",
+                "place": "Roma (RM) - Smart Working",
+                "site": "https://www.jnh.it/"
             },
             {
                 "imageUrl": "https://qontinual.com/wp-content/uploads/2020/09/Qontinual-LOGO-with-text-1.png",
                 "title": "Qontinual Italia Srl",
-                "description": "",
+                "description": "La mia attuale azienda, lavoro come front-end developer ma per qualsiasi necessità sono disponibile a lavorare su diversi progetti con tecnologie non legate al markup.",
                 "subtitle": "Front-end Developer",
-                "dates": "01/02/21 - Presente"
+                "dates": "01/02/21 - Presente",
+                "place": "Roma (RM) - Smart Working",
+                "site": "https://qontinual.com/"
             },
             {
                 "imageUrl": "https://www.tecnopolo.it/wp-content/uploads/2016/10/Logo-Staer-Sistemi-tecnopolo-tiburtino.jpg",
                 "title": "Skyfield",
-                "description": "",
+                "description": "Azienda di appoggio fin quando non è stata aperta la sede in Italia di Redev.",
                 "subtitle": "Front-end Developer",
-                "dates": "15/10/20 - 31/01/21"
+                "dates": "15/10/20 - 31/01/21",
+                "place": "Roma (RM) - Smart Working",
+                "site": "https://www.manpower.it/azienda/staer-sistemi-%E2%80%93-skyfield"
             },
             {
                 "imageUrl": "https://media-exp1.licdn.com/dms/image/C4D1BAQGLKmgrjp1XMw/company-background_10000/0/1585750156142?e=2159024400&v=beta&t=14NkU3ZSgqlkifXuWLMxNSTPqXX_OATW4hkwSTxWiVo",
                 "title": "LineApp",
                 "description": "Esperienza molto negativa all'interno di una start-up di Roma ma formativa per il mio futuro. Durante i due mesi di sviluppo di un'app (prodotto interno) ho utilizzato Nativescript, nodeJS, MongoDB e postgreSQL.",
                 "subtitle": "Full-stack Developer",
-                "dates": "01/08/20 - 14/10/20"
+                "dates": "01/08/20 - 14/10/20",
+                "place": "Roma (RM)",
+                "site": "http://lineapp.it/"
             },
             {
                 "imageUrl": "https://cdn.lifehack.org/wp-content/uploads/2015/01/workstation-405768_1280.jpg",
                 "title": "Geek Insiders",
                 "description": "Il mio ultimo progetto, Geek Insiders è un blog mirato a  creare una community appassionata di tecnologia e sviluppo. Il progetto ha consolidato le mie capacità  nell’utilizzo di HTML5, CSS3, JS (ES6) e design, rendendo il sito web il più gradevole e funzionale possibile.",
                 "subtitle": "Founder & Blogger",
-                "dates": "01/07/20 - Presente"
+                "dates": "01/07/20 - Presente",
+                "place": "Smart Working",
+                "site": "https://geekinsiders.it/"
             },
             {
                 "imageUrl": "https://media-exp3.licdn.com/dms/image/C511BAQHlRiajLlrFZw/company-background_10000/0/1519814298737?e=2159024400&v=beta&t=M2rm6VBK_2NeVl5s6FQ13_UaFKukYpAS0joBOZr97zo",
                 "title": "ChimeraRevo",
                 "description": "Una breve ma preziosa esperienza presso uno dei siti maggiormente influenti nel mondo del tech blogging.",
                 "subtitle": "Blogger",
-                "dates": "01/12/18 - 31/01/19"
+                "dates": "01/12/18 - 31/01/19",
+                "place": "Smart Working",
+                "site": "https://www.chimerarevo.com/"
             },
             {
                 "imageUrl": "https://opinioni.it/Uploads/Products/199915/logo_annuncino_large.png",
                 "title": "Annuncino.it",
                 "description": "Consulenza SEO per comprendere quali fossero le migliori strategie da adottare per migliorare il piazzamento di Google e dare maggiore visibilità agli annunci presenti sulla piattaforma.",
                 "subtitle": "Consulenza SEO",
-                "dates": "2016"
+                "dates": "2016",
+                "place": "Smart Working",
+                "site": "https://www.annuncino.it/"
             },
             {
                 "imageUrl": "data:image/png;base64,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",
                 "title": "iTechMania.it",
                 "description": "Consulenza a 360 gradi per sviluppare un neonato blog in un punto di interesse per tutti gli appassionati del mondo tech. Aspetti della consulenza inclusero performance improvements e user experience.",
                 "subtitle": "Consulenza Informatica",
-                "dates": "2015"
+                "dates": "2015",
+                "place": "Smart Working",
+                "site": "https://www.itechmania.it/"
             },
             {
                 "imageUrl": "https://i.ibb.co/TL1wnpK/hd-dev-logo.png",
                 "title": "HD Dev",
                 "description": "Progetto sviluppato con un collega universitario. Il sito - sviluppato con Wordpress, PHP, HTML5, CSS3, MySQL - raccoglie  un numero notevole di guide e news riguardanti il mondo della tecnologia.",
                 "subtitle": "Founder & Blogger",
-                "dates": "01/07/15 - 01/01/21"
+                "dates": "01/07/15 - 01/01/21",
+                "place": "Smart Working"
             },
             {
                 "imageUrl": "https://saggiamente.com/wp-content/uploads/2018/03/saggiamente-logo-bgnone.png",
                 "title": "Saggiamente",
                 "description": "Sito tech che mi ha permesso, attraverso le guide e le news pubblicate, di comprendere quali siano le necessità degli utenti che utilizzano dispositivi Apple, nonché pratiche e tecniche per sviluppare UX d’eccellenza.",
                 "subtitle": "Front-end Developer",
-                "dates": "01/05/15 - 01/06/15"
+                "dates": "01/05/15 - 01/06/15",
+                "place": "Smart Working",
+                "site": "https://www.saggiamente.com/"
             },
             {
                 "imageUrl": "https://cdn.lifehack.org/wp-content/uploads/2015/01/workstation-405768_1280.jpg",
                 "title": "Geek Assistant",
                 "description": "Il mio primo blog, avviato in giovane età, mi ha permesso di mettere le basi su tutto quello che riguarda il mondo Wordpress, la sua organizzazione, styling, e gestione sistemistica.",
                 "subtitle": "Founder & Blogger",
-                "dates": "01/02/12 - 01/09/13"
+                "dates": "01/02/12 - 01/09/13",
+                "place": "Smart Working"
             },
             {
                 "imageUrl": "https://cdn.lifehack.org/wp-content/uploads/2015/01/workstation-405768_1280.jpg",
                 "title": "HTC Tech Site",
                 "description": "La mia prima esperienza da scrittore di un blog, attraverso cui ho migliorato le mie capacità di scrittura ed iniziato ad imparare la nozione di Copywriting.",
                 "subtitle": "Blogger",
-                "dates": "01/07/11 - 01/12/11"
+                "dates": "01/07/11 - 01/12/11",
+                "place": "Smart Working"
             }
 
         ],
     "projects" : 
         [
             {
-                "imageUrl": "https://marketingtwentyone.co.uk/wp-content/uploads/2018/03/Introduction-BL.png",
-                "title": "Progetto 1",
-                "description": "Avendo passato maggior parte della mia infanzia circondato da gadget di ultima (ora non proprio ultima) generazione, che mio padre amava riparare, ho sempre amato la tecnologia. Questo è ciò che mi ha spinto a studiare Computer Science all’università, e ad intraprendere la strada del blogging, creando centinaia di guide e tutorial per la community tech online. Attualmente, sono un giovane professionista emergente, ansioso di continuare a sviluppare le mie capacità, comprendendo che questo è un settore in continua evoluzione. Sono sempre alla ricerca di nuove sfide, che confronto con intuizione e dedizione. Infine, seppur avendo accumulato molta esperienza lavorando autonomamente, trovo che i migliori successi siano frutto della  stretta collaborazione di un team affiatato."
+                "imageUrl": "https://res.cloudinary.com/dtpseup2f/image/upload/f_auto,q_auto/v1605457705/letsbuildui/2020-11-15-toggle/toggle-complete.gif",
+                "title": "Dark/Light",
+                "description": "Mini webApp sviluppata come progetto personale, è stato utilizzato JavaScript, il framework Express, un database MySQL ed è eseguita su runtime NodeJS. E' un semplice bottone che permette di abilitare/disattivare la dark mode su un sito web.",
+                "gitHub": "https://github.com/simonelucarossi/dark-light"
             },
             {
-                "imageUrl": "https://marketingtwentyone.co.uk/wp-content/uploads/2018/03/Introduction-BL.png",
-                "title": "Progetto 2",
-                "description": "Inglese.\nFlag: Italy on OpenMoji 13.0 Buona capacità nella comprensione del testo inglese e di comprensione durante un dialogo; buona capacità di scrittura e formazione di frasi anche complesse; discreta capacità nel parlare in modo sciolto la lingua. Esperienza complementare: convivenza prolungata e dialogo diretto con una persona madrelingua di nazionalità inglese."
+                "imageUrl": "http://web2.flashgames.it/giochi/datavolo/daily.freecell/daily.freecell.jpg",
+                "title": "FreeCell",
+                "description": "Gioco di carte sviluppato per il progetto di Intelligenza Artificiale del dipartimento di Matematica e Informatica. Il gioco è sviluppato con Java (SDK 13), libGDX e DLV.",
+                "gitHub": "https://github.com/simonelucarossi/Freecell"
             },
             {
-                "imageUrl": "https://marketingtwentyone.co.uk/wp-content/uploads/2018/03/Introduction-BL.png",
-                "title": "Progetto 3",
-                "description": "Test"
+                "imageUrl": "https://algorithmwatch.org/en/wp-content/uploads/2021/03/AW-Job-Ad-Faces-Red-No-Text-March-2021.jpg",
+                "title": "Job Advisor",
+                "description": "Una bacheca per avvisi di lavoro sviluppata in coppia con un collega per un progetto universitario. Le tecnologie utilizzate includono HTML5, Javascript, AJAX, CSS3, Bootstrap, Java, PostgreSQL, Tomcat.",
+                "gitHub": "https://github.com/simonelucarossi/Job-Advisor-New"
+            },
+            {
+                "imageUrl": "https://image.winudf.com/v2/image/Y29tLnNpbW9uZXJvc3NpLmdhbWVfc2NyZWVuXzJfMTUxNDEyNjY5Nl8wNzg/screen-2.jpg?fakeurl=1&type=.jpg",
+                "title": "Hot Air Balloon Rush",
+                "description": "Progetto personale sviluppato in un giorno per semplice divertimento ed allenamento nel linguaggio di programmazione Java ed utilizzo del framework libGDX. Il gioco è disponibile sul Google Play Store.",
+                "site": "https://play.google.com/store/apps/details?id=com.simonerossi.game&hl=it"
+            },
+            {
+                "imageUrl": "https://cdn.mos.cms.futurecdn.net/a2KaqLFJg3HJ6e9xrk6RtB.jpg",
+                "title": "Tower Defense",
+                "description": "Gioco sviluppato in team con altri due colleghi per un progetto universitario con il linguaggio di programmazione Java. Tra le varie librerie, è stato utilizzato  il framework libGDX, che ci ha permesso di sviluppare il gioco sia per piattaforma PC che per Android."
+            },
+            {
+                "imageUrl": "https://github.com/simonelucarossi/PacMan_Game/raw/master/screen3.png",
+                "title": "PacMan",
+                "description": "Progetto universitario per lo sviluppo del videogioco PacMan  per PC tramite il linguaggio C++ e l’ausilio della libreria allegro.",
+                "gitHub": "https://github.com/simonelucarossi/PacMan_Game"
             }
         ]
 }

@@ -121,3 +121,36 @@
     margin-bottom: 20px;
     display: flex;
 }
+
+.place {
+    color: #c1c1c1;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.place-container {
+    margin-top: -25px;
+    margin-bottom: 10px;
+}
+
+.progressBarsContainer {
+    margin-top: 30px;
+    width: calc(100vw);
+    min-height: calc(59vh);
+    background: white;
+    padding: 60px;
+    box-shadow: 0px 0px 5px #e5e5e5;
+}
+
+.progressBarsContainer .progress {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.capabilities-title {
+    margin-left: 20%;
+    margin-right: 20%;
+    font-size: 18px;
+    font-family: sans-serif;
+    color: #b7b7b7;
+}

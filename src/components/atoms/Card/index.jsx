@@ -5,7 +5,7 @@ import Button from '../Button';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCodeBranch, faLink } from "@fortawesome/free-solid-svg-icons";
 
-export const Card = ({ image, title, subtitle, dates, description }) => {
+export const Card = ({ image, title, subtitle, dates, description, place, gitHub, site }) => {
 
     return (    
         <>
@@ -23,12 +23,27 @@ export const Card = ({ image, title, subtitle, dates, description }) => {
                         </Row>
                     ) : ''
                 }
+                {
+                    place ? (
+                        <Row className="place-container">
+                            <p className="place">{place}</p>
+                        </Row>
+                    ) : ''
+                }
                 <Row>
                     {description}
                 </Row>
                 <Row className="buttons-container">
-                    <Button name="Vedi su GitHub" icon={<FontAwesomeIcon icon={faCodeBranch}/>}/>
-                    <Button name="Visita sito web" icon={<FontAwesomeIcon icon={faLink}/>}/>
+                    {
+                        gitHub ? (
+                            <Button onClick={() => window.open(gitHub)} name="Vedi su GitHub" icon={<FontAwesomeIcon icon={faCodeBranch}/>}/>
+                        ) : ''
+                    }
+                    {
+                        site ? (
+                            <Button onClick={() => window.open(site)} name="Visita sito web" icon={<FontAwesomeIcon icon={faLink}/>}/>
+                        ) : ''
+                    }                    
                 </Row>
             </Col>      
         </>
@@ -49,6 +64,7 @@ Card.propTypes = {
     description: PropTypes.string,
     subtitle: PropTypes.string,
     dates: PropTypes.string,
+    place: PropTypes.string,
 };
 
 export default Card;
