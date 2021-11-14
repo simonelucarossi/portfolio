@@ -38,7 +38,7 @@ import { useHistory } from 'react-router';
       {
           title: 'Jobs',
           icon: <FiTool />,
-          function: () => {},
+          function: () => { history.push('/jobs')},
           color: () => 'white',
       },
       {

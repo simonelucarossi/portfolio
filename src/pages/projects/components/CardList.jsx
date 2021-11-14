@@ -23,11 +23,11 @@ function Content({title, content, projectImage, stack, gitHubLink}) {
         <Text p="3" ml="4">{stack}</Text>
       </Flex>
       <Flex style={{ padding: '0 20px 10px 20px'}}>
-        <Text p="3" bg="black" color="white">GitHub</Text>
+        <Text p="3" bg="#4a80bb">Description:</Text>
         <Text p="3" ml="4">{content}</Text>
       </Flex>
       <Flex style={{ padding: '0 20px 10px 20px'}}>
-        <Text p="3" bg="#4a80bb">Description:</Text>
+        <Text p="3" bg="black" color="white">GitHub</Text>
         <Link href={gitHubLink} color="#ef6f6f" p="3" ml="4"><Flex>Go to the project <FiArrowUpRight/></Flex></Link>
       </Flex>
     </motion.div>
@@ -103,7 +103,7 @@ function Item({title, content, projectImage, logoPng, stack, gitHubLink}) {
   const toggleOpen = () => setIsOpen(!isOpen);
 
   return (
-    <motion.li layout onClick={toggleOpen} style={{ backgroundColor: backgroundColorItem, border: borderColor, boxShadow: boxShadowItem}} initial={{ borderRadius: 10 }}>
+    <motion.li className="card-item" layout onClick={toggleOpen} style={{ backgroundColor: backgroundColorItem, border: borderColor, boxShadow: boxShadowItem}} initial={{ borderRadius: 10 }}>
       {!isOpen && (<Flex style={{ padding: '20px'}}>
         <motion.div className="avatar" style={{ backgroundColor: backgroundColorItem}} layout>
           <img style={{height: '100%', padding: '2px', borderRadius: '10px'}} src={logoPng}/>
@@ -125,7 +125,7 @@ function Item({title, content, projectImage, logoPng, stack, gitHubLink}) {
 export const CardList = ({ maxWidth }) => {
   return (
     <AnimateSharedLayout>
-      <motion.ul style={{width: '100%', marginBottom: '50px'}} layout initial={{ borderRadius: 25 }}>
+      <motion.ul className="card-list" style={{width: '100%', marginBottom: '50px'}} layout initial={{ borderRadius: 25 }}>
         {items.map(item => (
           <Item key={item} title={item.title} content={item.content} projectImage={item.projectImage} logoPng={item.logoPng} stack={item.stack} gitHubLink={item.gitHubLink}/>
         ))}

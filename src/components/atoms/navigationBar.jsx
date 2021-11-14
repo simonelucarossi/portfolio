@@ -27,7 +27,7 @@ import {
     : `${spin} infinite 2s linear`;
 
     return (
-        <Flex>
+        <Flex mt="60px">
             <FiLink2 color={colorDivider} fontSize={20} style={{ marginTop: "4px", marginRight: '15px'}}/>
             <Breadcrumb spacing="8px" separator={<FiChevronRight color={colorDivider} />}>
                 {

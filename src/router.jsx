@@ -12,6 +12,7 @@ import {
 import Dashboard from './pages/dashboard/dashboard';
 import theme from './utils/theme';
 import Projects from './pages/projects/projects';
+import Jobs from './pages/jobs/jobs';
 
 const Router = () => {
   const routes = [
@@ -31,6 +32,15 @@ const Router = () => {
       // eslint-disable-next-line react/display-name
       component: () => {
         return <Projects />;
+      },
+    },
+    {
+      title: 'Jobs',
+      key: 'jobs',
+      link: '/jobs',
+      // eslint-disable-next-line react/display-name
+      component: () => {
+        return <Jobs />;
       },
     },
   ];
