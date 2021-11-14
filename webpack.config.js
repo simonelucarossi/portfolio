@@ -24,9 +24,26 @@ module.exports = {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
       },
+      
     ],
   },
-  plugins: [new HtmlWebpackPlugin({ template: path.resolve(__dirname, 'public', 'index.html') })],
+  plugins: [new HtmlWebpackPlugin({ template: path.resolve(__dirname, 'public', 'index.html') }), 
+            {
+              resolve: "@chakra-ui/gatsby-plugin",
+              options: {
+                /**
+                 * @property {boolean} [resetCSS=true]
+                 * if false, this plugin will not use `<CSSReset />
+                 */
+                resetCSS: true,
+                /**
+                 * @property {boolean} [isUsingColorMode=true]
+                 * if false, this plugin will not use <ColorModeProvider />
+                 */
+                isUsingColorMode: true,
+              },
+            },
+            ],
   devServer: {
     open: true,
     hot: true,
