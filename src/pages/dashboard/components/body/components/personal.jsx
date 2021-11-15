@@ -3,7 +3,7 @@ import { FaFacebook, FaGithub, FaLinkedin, FaMailBulk, FaTwitter } from 'react-i
 import { motion } from "framer-motion"
 import NavigationBar from '../../../../../components/atoms/navigationBar';
 
-const Personal = ({navigationObjects}) => {
+const Personal = ({navigationObjects, toVisisbleSocial = true}) => {
     const MotionImage = motion(Image);
     return (
         <>
@@ -51,33 +51,38 @@ const Personal = ({navigationObjects}) => {
                 borderStyle={'solid'}
                 marginBottom="10px"
             />
-            <Box
-                maxW={{ base: '90%', md: '70%', lg: '50%'}}
-                w="100%"
-                py={4}
-                marginTop="40px !important"
-                align="center"
-                direction={{ base: 'column', md: 'row' }}
-                spacing={4}
-            >
-                    <Flex direction={{ base: 'column', md: 'row' }} >
-                        <Button bg="#385898" mr="15px" mb="10px" fontSize="13px" _hover="#385898"  color="white"  height="50px" width={{ base: '100%', md: '70%', lg: '60%'}} leftIcon={<FaFacebook />}>
-                            Facebook
-                        </Button>
-                        <Button bg="black"  mr="15px" mb="10px" fontSize="13px" _hover="black" height="50px" width={{ base: '100%', md: '70%', lg: '60%'}}  color="white" leftIcon={<FaGithub />}>
-                            GitHub
-                        </Button>
-                        <Button bg="#0a66c2"  mr="15px" mb="15px" fontSize="13px" _hover="#0a66c2"  color="white"  height="50px" width={{ base: '100%', md: '70%', lg: '60%'}} leftIcon={<FaLinkedin />}>
-                            Linkedin
-                        </Button>
-                        <Button bg="#1da1f2"  mr="15px" mb="15px" fontSize="13px" _hover="#1da1f2"  color="white"  height="50px" width={{ base: '100%', md: '70%', lg: '60%'}} leftIcon={<FaTwitter />}>
-                            Twitter
-                        </Button>
-                        <Button bg="#c3c3c3"  mr="15px" mb="15px" fontSize="13px" _hover="#c3c3c3"  color="white"  height="50px" width={{ base: '100%', md: '70%', lg: '60%'}} leftIcon={<FaMailBulk />}>
-                            Email
-                        </Button>
-                    </Flex>
-            </Box>
+            {
+                toVisisbleSocial === true && (
+                    <Box
+                        maxW={{ base: '90%', md: '70%', lg: '50%'}}
+                        w="100%"
+                        py={4}
+                        marginTop="40px !important"
+                        align="center"
+                        direction={{ base: 'column', md: 'row' }}
+                        spacing={4}
+                    >
+                            <Flex direction={{ base: 'column', md: 'row' }} >
+                                <Button bg="#385898" mr="15px" mb="10px" fontSize="13px" _hover="#385898"  color="white"  height="50px" width={{ base: '100%', md: '70%', lg: '60%'}} leftIcon={<FaFacebook />}>
+                                    Facebook
+                                </Button>
+                                <Button bg="black"  mr="15px" mb="10px" fontSize="13px" _hover="black" height="50px" width={{ base: '100%', md: '70%', lg: '60%'}}  color="white" leftIcon={<FaGithub />}>
+                                    GitHub
+                                </Button>
+                                <Button bg="#0a66c2"  mr="15px" mb="15px" fontSize="13px" _hover="#0a66c2"  color="white"  height="50px" width={{ base: '100%', md: '70%', lg: '60%'}} leftIcon={<FaLinkedin />}>
+                                    Linkedin
+                                </Button>
+                                <Button bg="#1da1f2"  mr="15px" mb="15px" fontSize="13px" _hover="#1da1f2"  color="white"  height="50px" width={{ base: '100%', md: '70%', lg: '60%'}} leftIcon={<FaTwitter />}>
+                                    Twitter
+                                </Button>
+                                <Button bg="#c3c3c3"  mr="15px" mb="15px" fontSize="13px" _hover="#c3c3c3"  color="white"  height="50px" width={{ base: '100%', md: '70%', lg: '60%'}} leftIcon={<FaMailBulk />}>
+                                    Email
+                                </Button>
+                            </Flex>
+                    </Box>
+                )
+            }
+            
             <Container
                 as={Flex}
                 maxW={{ base: '90%', md: '70%', lg: '60%'}}

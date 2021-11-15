@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import Header from '../../components/atoms/header';
 import Sidebar from '../../components/atoms/sidebar';
 import Footer from '../../components/atoms/footer/footer';
-import { CardList } from './components/CardList';
 import { motion } from "framer-motion"
 import {Container, Stack, useColorModeValue, Box} from '@chakra-ui/react';
 import Personal from '../dashboard/components/body/components/personal';
+import ListPricingCard from './components/listPricing/ListPricingCard';
 
-const Projects = () => {
+const Pricing = () => {
     const MotionStack = motion(Stack);
     const MotionContainer = motion(Container);
 
@@ -20,7 +20,7 @@ const Projects = () => {
         },
         {
             isCurrentPage: true,
-            pageName: 'Projects',
+            pageName: 'Pricing',
         }
     ];
 
@@ -41,7 +41,7 @@ const Projects = () => {
             >
                 <Personal navigationObjects={path} toVisisbleSocial={false}/>
                 <MotionContainer animate={{ y: [1000, -30] }} padding={'50px 0 0px 0'} alignItems="center" maxWidth={{ base: '95%', md: '70%', lg: '60%' }}>
-                 <CardList/>
+                    <ListPricingCard/>
                 </MotionContainer>
                 
 
@@ -51,4 +51,4 @@ const Projects = () => {
     )
 };
 
-export default Projects;
+export default Pricing;

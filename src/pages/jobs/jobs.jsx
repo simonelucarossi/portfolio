@@ -39,7 +39,7 @@ const Jobs = () => {
                 spacing={0}
                 alignItems="center"
             >
-                <Personal navigationObjects={path}/>
+                <Personal navigationObjects={path} toVisisbleSocial={false}/>
                 <MotionContainer animate={{ y: [1000, -30] }} padding={'50px 0 30px 0'} maxWidth={{ base: '95%', md: '70%', lg: '60%' }}>
                     <JobDescription/>
                 </MotionContainer>

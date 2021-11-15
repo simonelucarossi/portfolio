@@ -22,10 +22,11 @@ import {
   } from '@chakra-ui/react';
 
   
-import { FiHome, FiTool, FiTrello, FiSlack, FiDollarSign } from "react-icons/fi";
+import { FiHome, FiTool, FiTrello, FiSlack, FiDollarSign, FiCoffee } from "react-icons/fi";
 import { HamburgerIcon, ChevronDownIcon, ChevronRightIcon } from '@chakra-ui/icons';
 import { FaMoon, FaSun } from 'react-icons/fa';
 import { VscCode } from 'react-icons/vsc';
+import { SiFiverr } from 'react-icons/si';
 import { useHistory } from 'react-router';
 
 const Header = ({onBurgerClick}) => {
@@ -38,7 +39,7 @@ export const WithSubnavigation = ({onBurgerClick}) => {
     const { isOpen, onToggle } = useDisclosure();
     const { colorMode, toggleColorMode } = useColorMode();
 
-    const backGroundObject = useColorModeValue("#314ecb", "#385898");
+    const backGroundObject = useColorModeValue("#314ecb", "#c38906");
     const colorObject = useColorModeValue("white", "#d9d9d9");
 
     const history = useHistory();
@@ -65,13 +66,13 @@ export const WithSubnavigation = ({onBurgerClick}) => {
       {
           title: 'Pricing',
           icon: <FiDollarSign />,
-          function: () => {},
+          function: () => { history.push('/pricing') },
           color: () => 'white',
       },
       {
           title: 'Contact Me',
           icon: <FiSlack />,
-          function: () => {},
+          function: () => {history.push('/contacts')},
           color: () => 'white',
       }
     ];
@@ -138,14 +139,25 @@ export const WithSubnavigation = ({onBurgerClick}) => {
                   { 
                     pages.map((page) => {
                         return (
+                          
                           <MenuItem>
-                            <Button minWidth='270px' minHeight='50px' onClick={page.function} leftIcon={page.icon} bg={colorMode === 'dark' ? '#2a2a2a' : 'black'} color={page.color} variant="solid" isFullWidth h="40px" fontSize="15px" >
+                            <Button minWidth='270px' minHeight='50px' onClick={page.function} leftIcon={page.icon} bg={colorMode === 'dark' ? '#2a2a2a' : '#ddddddb3'} color={colorMode === 'dark' ? page.color : 'black'} variant="solid" isFullWidth h="40px" fontSize="15px" >
                                 {page.title}
                             </Button>
                           </MenuItem>
                         )
                     })
                   }
+                  <MenuItem>
+                      <Button minWidth='270px' minHeight='50px' onClick={() => {}} leftIcon={<FiCoffee/>} bg={'#4a80bb'} _hover={{ bg: '#4a80bb'}} color={'white'} variant="solid" isFullWidth h="40px" fontSize="15px" >
+                        {"Donate a coffee"}
+                      </Button>
+                  </MenuItem>
+                  <MenuItem>
+                      <Button minWidth='270px' minHeight='50px' onClick={() => {}} leftIcon={<SiFiverr/>} bg={'#00875a'} _hover={{ bg: '#00875a'}} color={'white'} variant="solid" isFullWidth h="40px" fontSize="15px" >
+                        {"Fiverr Profile"}
+                      </Button>
+                  </MenuItem>
               </MenuList>
             </Menu>
           </Stack>

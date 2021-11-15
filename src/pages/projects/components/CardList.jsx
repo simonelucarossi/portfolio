@@ -4,7 +4,6 @@ import { Image, Box, Text, li, Flex,useColorModeValue, Link } from '@chakra-ui/r
 import { FiArrowUpRight } from 'react-icons/fi';
 
 function Content({title, content, projectImage, stack, gitHubLink}) {
-  const textColor = useColorModeValue('black', 'white');
 
   return (
     <motion.div
@@ -13,7 +12,7 @@ function Content({title, content, projectImage, stack, gitHubLink}) {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <Image src={projectImage}  w="100%" h={500}/>
+      <Image src={projectImage}  w="100%" h={{ base: '280px', md: '500px' }}/>
       <Flex style={{ padding: '15px 20px 15px 20px'}}>
         <Text p="3" bg="gray">Title:</Text>
         <Text p="3" ml="4">{title}</Text>
@@ -35,7 +34,15 @@ function Content({title, content, projectImage, stack, gitHubLink}) {
 }
 
 const items = [
-  // Photo by ivan Torres on Unsplash
+  {
+    id: "i",
+    content: "Il mio portfolio, quello che stai visualizzando ora, l'idea è nata per testare la libreria Chakra UI e la libreria framer-motion, entrambe utilizzate insieme a React.",
+    title: "Portfolio",
+    logoPng: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Circle-icons-dev.svg/1024px-Circle-icons-dev.svg.png",
+    projectImage: 'https://i.ibb.co/ryPDdNm/screen1.png',
+    stack: "React, Chakra UI, Framer-Motion, EsLint",
+    gitHubLink: 'https://github.com/simonelucarossi/portfolio'
+  },
   {
     id: "c",
     content: "Mini webApp sviluppata come progetto personale, è stato utilizzato JavaScript, il framework Express, un database MySQL ed è eseguita su runtime NodeJS.",
@@ -45,50 +52,50 @@ const items = [
     stack: "JS, Express, NodeJS",
     gitHubLink: 'https://github.com/simonelucarossi/dark-light'
   },
-  // Photo by Dennis Brendel on Unsplash
   {
     id: "f",
     content: "Gioco di carte sviluppato per il progetto di Intelligenza Artificiale del dipartimento di Matematica e Informatica. Il gioco è sviluppato con Java (SDK 13), libGDX e DLV.",
     title: "FreeCell",
     logoPng: "https://torako.wakarimasen.moe/file/torako/g/image/1600/95/1600956075673.png",
     projectImage: "https://store-images.s-microsoft.com/image/apps.2999.9007199266467036.15a415a1-dbd4-4eb9-afcd-2520d5646edc.50a72768-4d75-4e88-93c5-bb3d389c8cc7?mode=scale&q=90&h=1080&w=1920",
-    stack: "DLV, Java (SDK13), libGDX"
+    stack: "DLV, Java (SDK13), libGDX",
+    gitHubLink: 'https://github.com/simonelucarossi/Freecell'
   },
-  // Photo by Alessandra Caretto on Unsplash
   {
     id: "a",
     content: "Una bacheca per avvisi di lavoro sviluppata in coppia con un collega per un progetto universitario. Le tecnologie utilizzate includono HTML5, Javascript, AJAX, CSS3, Bootstrap, Java, PostgreSQL, Tomcat.",
     title: "Job Advisor",
     logoPng: "https://www.freeiconspng.com/uploads/work-icon-0.png",
     projectImage: "https://www.lettoquotidiano.it/wp-content/uploads/2019/10/Google-Job-Search.jpg",
-    stack: "Java, JavaScript, postgreSQL, TomCat, AJAX, CSS3, BootStrap, HTML5"
+    stack: "Java, JavaScript, postgreSQL, TomCat, AJAX, CSS3, BootStrap, HTML5",
+    gitHubLink: 'https://github.com/simonelucarossi/Job-Advisor-New'
   },
-  // Photo by Taneli Lahtinen on Unsplash
   {
     id: "g",
     content: "Progetto personale sviluppato in un giorno per semplice divertimento ed allenamento nel linguaggio di programmazione Java ed utilizzo del framework libGDX. Il gioco è disponibile sul Google Play Store.",
     title: "Hot Air Balloon Rush",
     logoPng: "https://cdn.imgbin.com/16/23/2/imgbin-hot-air-balloon-balloon-271PDbx84Aife4SYzex3x3b5y.jpg",
     projectImage: "https://image.winudf.com/v2/image/Y29tLnNpbW9uZXJvc3NpLmdhbWVfc2NyZWVuXzFfMTUxNDEyNjY5Nl8wNTk/screen-1.jpg?fakeurl=1&type=.jpg",
-    stack: "Java, libGDX, Android Studio"
+    stack: "Java, libGDX, Android Studio",
+    gitHubLink: ''
   },
-  // Photo by Simone Hutsch on Unsplash
   {
     id: "d",
     content: "Gioco sviluppato in team con altri due colleghi per un progetto universitario con il linguaggio di programmazione Java. Tra le varie librerie, è stato utilizzato  il framework libGDX, che ci ha permesso di sviluppare il gioco sia per piattaforma PC che per Android.",
     title: "Tower Defense",
     logoPng: "https://e7.pngegg.com/pngimages/827/290/png-clipart-castle-defense-2-ourworld-tower-defense-android-game-logo.png",
     projectImage: "https://o.gombis.com/image/310789dae3d4d56005052edcb3e26aba.png?w=400&h=225&crop-to-fit&sa=jpg&q=75",
-    stack: "Java, libGDX, Android Studio"
+    stack: "Java, libGDX, Android Studio",
+    gitHubLink: 'https://github.com/simonelucarossi/IGPE_Project'
   },
-  // Photo by Siora Photography on Unsplash
   {
     id: "h",
     content: "Progetto universitario per lo sviluppo del videogioco PacMan  per PC tramite il linguaggio C++ e l’ausilio della libreria allegro.",
     title: "PacMan",
     logoPng: "https://www.pngitem.com/pimgs/m/157-1571473_pac-man-png-pacman-png-illustration-transparent-png.png",
     projectImage: "https://github.com/simonelucarossi/PacMan_Game/raw/master/screen2.png",
-    stack: "C++, allegro"
+    stack: "C++, allegro",
+    gitHubLink: 'https://github.com/simonelucarossi/PacMan_Game'
   },
 ];
 
