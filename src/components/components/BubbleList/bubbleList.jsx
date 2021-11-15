@@ -1,7 +1,6 @@
 
-import {Flex, Image, useColorModeValue } from '@chakra-ui/react';
+import {Flex, Image, useColorModeValue, Box } from '@chakra-ui/react';
 import { AnimateSharedLayout, motion } from 'framer-motion';
-import { useEffect, useState } from 'react';
 
 const spring = {
   type: "spring",
@@ -34,19 +33,22 @@ const BubbleList = ({ width, style, list, setObjectSelected, objectSelected  }) 
 
     return (
         <AnimateSharedLayout>
-            <MotionFlex className="test" style={style}>
-                {list.map(listObject => {
-                return (<Item
-                    key={listObject.keyName}
-                    keyName={listObject.keyName}
-                    isSelected={ objectSelected.keyName === listObject.keyName }
-                    onClick={() => setObjectSelected(listObject)}
-                    keyImage={listObject.keyImage}
-                    style={{ border: borderDarkMode}}
-                >
-                </Item>)
-                })}
-            </MotionFlex>
+            <Box alignItems="center">
+                <MotionFlex className="test" style={{...style, marginLeft: '10px'}}>
+                    {list.map(listObject => {
+                    return (<Item
+                        key={listObject.keyName}
+                        keyName={listObject.keyName}
+                        isSelected={ objectSelected.keyName === listObject.keyName }
+                        onClick={() => setObjectSelected(listObject)}
+                        keyImage={listObject.keyImage}
+                        style={{ border: borderDarkMode}}
+                    >
+                    </Item>)
+                    })}
+                </MotionFlex>
+            </Box>
+            
         </AnimateSharedLayout>
     )
 }

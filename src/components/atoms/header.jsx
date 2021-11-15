@@ -4,8 +4,6 @@ import {
     Flex,
     Text,
     IconButton,
-    Button,
-    Image,
     Stack,
     Collapse,
     Icon,
@@ -14,22 +12,23 @@ import {
     PopoverTrigger,
     PopoverContent,
     useColorModeValue,
-    useBreakpointValue,
     useColorMode,
     useDisclosure,
+    Menu,
+    MenuButton,
+    MenuList,
+    MenuItem,
+    Button,
   } from '@chakra-ui/react';
 
-  import {
-    HamburgerIcon,
-    CloseIcon,
-    ChevronDownIcon,
-    ChevronRightIcon,
-  } from '@chakra-ui/icons';
-  import { RiCodeSSlashLine } from 'react-icons/ri';
-  import {FaMoon, FaSun} from 'react-icons/fa';
+  
+import { FiHome, FiTool, FiTrello, FiSlack, FiDollarSign } from "react-icons/fi";
+import { HamburgerIcon, ChevronDownIcon, ChevronRightIcon } from '@chakra-ui/icons';
+import { FaMoon, FaSun } from 'react-icons/fa';
+import { VscCode } from 'react-icons/vsc';
+import { useHistory } from 'react-router';
 
 const Header = ({onBurgerClick}) => {
-    const use = "";
     return (
         <WithSubnavigation onBurgerClick={onBurgerClick}/>
     );
@@ -39,8 +38,43 @@ export const WithSubnavigation = ({onBurgerClick}) => {
     const { isOpen, onToggle } = useDisclosure();
     const { colorMode, toggleColorMode } = useColorMode();
 
-    const backGroundObject = useColorModeValue("#314ecb", "#938e09")
-    const colorObject = useColorModeValue("white", "#d9d9d9")
+    const backGroundObject = useColorModeValue("#314ecb", "#385898");
+    const colorObject = useColorModeValue("white", "#d9d9d9");
+
+    const history = useHistory();
+
+    const pages = [
+      {
+          title: 'Home',
+          icon: <FiHome />,
+          function: () => { history.push('/')},
+          color: () => 'white',
+      },
+      {
+          title: 'Projects',
+          icon: <FiTrello />,
+          function: () => { history.push('/projects')},
+          color: () => 'white',
+      },
+      {
+          title: 'Jobs',
+          icon: <FiTool />,
+          function: () => { history.push('/jobs')},
+          color: () => 'white',
+      },
+      {
+          title: 'Pricing',
+          icon: <FiDollarSign />,
+          function: () => {},
+          color: () => 'white',
+      },
+      {
+          title: 'Contact Me',
+          icon: <FiSlack />,
+          function: () => {},
+          color: () => 'white',
+      }
+    ];
 
     return (
       <Box position="fixed" width="100%" zIndex="1200">
@@ -56,23 +90,19 @@ export const WithSubnavigation = ({onBurgerClick}) => {
           align={'center'}>
           <Flex
             flex={{ base: 1, md: 'auto' }}
-            display={{ base: 'flex', md: 'start' }}>
-            <IconButton
-                onClick={onBurgerClick}
-                icon={<HamburgerIcon w={12} h={12} />}
-              variant={'ghost'}
-              aria-label={'Toggle Navigation'}
-            />
-  
+            display={{ base: 'flex', md: 'start' }}
+          >
+            <VscCode
+              fontSize="30px"
+              color='#ef6f6f'
+            />  
+            <Text ml="6px" fontWeight="800" fontFamily="fangsong" mt="4.2px" fontSize="15px" color={useColorModeValue('#2c2c2c', '#bbbbbb')}>DEV. ROSSI</Text>
           </Flex>
           <Flex 
           flex={{ base: 1, md: 'auto' }}
           display={{ base: 2, md:'',  }}
           >
-          <RiCodeSSlashLine
-            fontSize="26px"
-            color={useColorModeValue('black', 'white')}
-          />
+          
           </Flex>
   
           <Stack
@@ -82,14 +112,42 @@ export const WithSubnavigation = ({onBurgerClick}) => {
             spacing={3}>
             <IconButton
               icon={colorMode === 'dark' ? <FaSun/> : <FaMoon/>}
-              fontSize={"15px"}
+              fontSize={"20px"}
               color={colorObject}
               backgroundColor={backGroundObject}
               onClick={toggleColorMode}
               w={"37px"}
               h={"37px"}
 
-            > Test </IconButton>
+            />
+            <Menu>
+              <MenuButton
+                as={IconButton}
+                borderRadius="5px"
+                cursor={'pointer'}
+                minW={0}
+                  fontSize={"25px"}
+                  color={colorObject}
+                  backgroundColor={useColorModeValue('#393939', '#30302e')}
+                  w={"37px"}
+                  h={"38px"}
+                  icon={<HamburgerIcon/>}
+                  aria-label={'Toggle Navigation'}
+              />
+              <MenuList bg={useColorModeValue("white","#222222")} borderRadius="10px">
+                  { 
+                    pages.map((page) => {
+                        return (
+                          <MenuItem>
+                            <Button minWidth='270px' minHeight='50px' onClick={page.function} leftIcon={page.icon} bg={colorMode === 'dark' ? '#2a2a2a' : 'black'} color={page.color} variant="solid" isFullWidth h="40px" fontSize="15px" >
+                                {page.title}
+                            </Button>
+                          </MenuItem>
+                        )
+                    })
+                  }
+              </MenuList>
+            </Menu>
           </Stack>
         </Flex>
   

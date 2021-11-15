@@ -74,9 +74,10 @@ const Work = () => {
                             color={useColorModeValue('white', 'white')} 
                             variant="solid" 
                             fontSize="14px" 
-                            w={400} 
+                            w={{ base: '100%', lg: '400px'}} 
                             h={39} 
                             mt={10}
+                            mb={30}
                         >
                             Visit my projects
                         </MotionButton>

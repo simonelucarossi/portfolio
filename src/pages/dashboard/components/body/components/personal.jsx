@@ -1,4 +1,5 @@
-import {Container, Stack, Image, Flex, useColorModeValue, Text, Heading, Box} from '@chakra-ui/react';
+import {Container, Button, Image, Flex, useColorModeValue, Heading, Box, Grid} from '@chakra-ui/react';
+import { FaFacebook, FaGithub, FaLinkedin, FaMailBulk, FaTwitter } from 'react-icons/fa';
 import { motion } from "framer-motion"
 import NavigationBar from '../../../../../components/atoms/navigationBar';
 
@@ -26,7 +27,8 @@ const Personal = ({navigationObjects}) => {
                     borderStyle={'solid'}
                     fontSize="18px"
                     px={6} 
-                    h={20} 
+                    h={"auto"}
+                    p="4" 
                     w={"100%"} 
                     marginBottom="30px"
                     fontFamily="MenloMy"
@@ -34,8 +36,8 @@ const Personal = ({navigationObjects}) => {
                 >
                     👋 Welcome on my site, I am a web developer working remotely from Italy. 😁
                 </Box>
-                <Heading fontSize="32px" fontFamily="initial" color={useColorModeValue('black', '#d9d9d9')} >Simone Luca Rossi</Heading>
-                <Heading fontSize="19px" fontFamily="serif" color={useColorModeValue('black', '#d9d9d9')}>🖥️ Full-stack Web Developer</Heading>
+                <Heading fontSize="32px" fontFamily="initial" textAlign={{ base: 'center', lg: 'left'}} color={useColorModeValue('black', '#d9d9d9')} >Simone Luca Rossi</Heading>
+                <Heading fontSize="19px" fontFamily="serif" textAlign={{ base: 'center', lg: 'left'}} color={useColorModeValue('#979797', '#817c7c')}>🖥️ Full-stack Web Developer</Heading>
             </Container>
             <MotionImage
                 whileHover={{ scale: 1.1 }}
@@ -49,6 +51,33 @@ const Personal = ({navigationObjects}) => {
                 borderStyle={'solid'}
                 marginBottom="10px"
             />
+            <Box
+                maxW={{ base: '90%', md: '70%', lg: '50%'}}
+                w="100%"
+                py={4}
+                marginTop="40px !important"
+                align="center"
+                direction={{ base: 'column', md: 'row' }}
+                spacing={4}
+            >
+                    <Flex direction={{ base: 'column', md: 'row' }} >
+                        <Button bg="#385898" mr="15px" mb="10px" fontSize="13px" _hover="#385898"  color="white"  height="50px" width={{ base: '100%', md: '70%', lg: '60%'}} leftIcon={<FaFacebook />}>
+                            Facebook
+                        </Button>
+                        <Button bg="black"  mr="15px" mb="10px" fontSize="13px" _hover="black" height="50px" width={{ base: '100%', md: '70%', lg: '60%'}}  color="white" leftIcon={<FaGithub />}>
+                            GitHub
+                        </Button>
+                        <Button bg="#0a66c2"  mr="15px" mb="15px" fontSize="13px" _hover="#0a66c2"  color="white"  height="50px" width={{ base: '100%', md: '70%', lg: '60%'}} leftIcon={<FaLinkedin />}>
+                            Linkedin
+                        </Button>
+                        <Button bg="#1da1f2"  mr="15px" mb="15px" fontSize="13px" _hover="#1da1f2"  color="white"  height="50px" width={{ base: '100%', md: '70%', lg: '60%'}} leftIcon={<FaTwitter />}>
+                            Twitter
+                        </Button>
+                        <Button bg="#c3c3c3"  mr="15px" mb="15px" fontSize="13px" _hover="#c3c3c3"  color="white"  height="50px" width={{ base: '100%', md: '70%', lg: '60%'}} leftIcon={<FaMailBulk />}>
+                            Email
+                        </Button>
+                    </Flex>
+            </Box>
             <Container
                 as={Flex}
                 maxW={{ base: '90%', md: '70%', lg: '60%'}}

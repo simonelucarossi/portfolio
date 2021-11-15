@@ -2,7 +2,8 @@ import BubbleList from '../../../../components/components/BubbleList/bubbleList'
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Container, Text, Flex } from '@chakra-ui/layout';
-import { useColorModeValue } from '@chakra-ui/color-mode';
+import { useColorMode, useColorModeValue } from '@chakra-ui/color-mode';
+import { Grid, Box } from '@chakra-ui/layout';
 
 const JobDescription = () => {
     const list = [
@@ -113,27 +114,44 @@ const JobDescription = () => {
 
     return (
         <>
-        <BubbleList style={{ maxWidth: '100%', marginBottom: '10px'}} list={list} setObjectSelected={setObjectSelected} objectSelected={objectSelected}/>
+        <BubbleList style={{ maxWidth: '100%', marginBottom: '10px'}} align="center" list={list} setObjectSelected={setObjectSelected} objectSelected={objectSelected}/>
         
-        <MotionContainer animate={{ opacity: [0, 1.0] }} transition={{ delay: 0.5 }} padding={'50px 0 0px 0'} maxWidth="100%" style={{  width: '100%'}}>
-                    <Flex mb="10px">
-                        <Text p="3" bg="#ef6f6f">Azienda</Text>
-                        <Text p="3" mt="-2" ml="2" fontWeight="600" fontSize="20px">{objectSelected.keyName}</Text>
-                    </Flex>
-                    <Flex mb="10px">
-                        <Text p="3" bg="#4a80bb">Periodo</Text>
-                        <Text p="3" color="gray" mt="0" ml="3" fontWeight="400" fontSize="15px">{objectSelected.keyTime}</Text>
-                    </Flex>
-                    <Flex mb="10px">
-                        <Text p="3" bg="#4a80bb">Ruolo</Text>
-                        <Text p="3" mt="0" ml="3" fontWeight="400" fontSize="15px">{objectSelected.keyRule}</Text>
-                    </Flex>
-                    <Flex mb="10px">
-                        <Text p="3" bg="#4a80bb">Sede</Text>
-                        <Text p="3" mt="0" ml="3" fontWeight="400" fontSize="15px">{objectSelected.keyPlace}</Text>
-                    </Flex>
+        <MotionContainer 
+            animate={{ y: [100, -30] }} 
+            transition={{ type: "spring", delay: 0.1 }} 
+            padding={'30px 15px 15px 15px'} 
+            maxWidth="100%" 
+            borderRadius="10px"
+            bg={useColorModeValue('#f9f8f8ab', '#2c2c2c')} 
+            marginTop="50px"
+            border={1}
+            borderColor={useColorModeValue('gray.400', '#282828')}
+            borderStyle={'solid'}
+            boxShadow={useColorModeValue("0px 0px 5px #979797d1", "0px 0px 5px #00000040")}
+            style={{  width: '100%'}}
+        >
+                    <Grid templateColumns="repeat(2, 1fr)" gap={6}>
+                        <Flex mb="10px">
+                            <Text p="3" bg="#ef6f6f">Azienda</Text>
+                            <Text p="3" mt="-2" ml="2" fontWeight="600" fontSize="20px">{objectSelected.keyName}</Text>
+                        </Flex>
+                        <Flex mb="10px">
+                            <Text p="3" bg="#b5af21">Ruolo</Text>
+                            <Text p="3" mt="0" ml="3" fontWeight="400" fontSize="15px">{objectSelected.keyRule}</Text>
+                        </Flex>
+                    </Grid>
+                    <Grid templateColumns="repeat(2, 1fr)" gap={6}>
+                        <Flex mb="10px">
+                            <Text p="3" bg="#4a80bb">Periodo</Text>
+                            <Text p="3" color="gray" mt="0" ml="3" fontWeight="400" fontSize="15px">{objectSelected.keyTime}</Text>
+                        </Flex>
+                        <Flex mb="10px">
+                            <Text p="4" bg="black" color="white">Sede</Text>
+                            <Text p="3" mt="0" ml="3" fontWeight="400" fontSize="15px">{objectSelected.keyPlace}</Text>
+                        </Flex>
+                    </Grid>
                    <Text p="3" mb="20px" bg="gray" w="100%">Esperienza</Text>
-                   <Text fontSize='18px' mb="50px" color={colorDescriptionText} fontFamily='MenloMy'>{objectSelected.keyDescription}</Text> 
+                   <Text fontSize='15px' mb="50px" color={colorDescriptionText} fontFamily='MenloMy'>{objectSelected.keyDescription}</Text> 
         </MotionContainer>
         </>
     )
