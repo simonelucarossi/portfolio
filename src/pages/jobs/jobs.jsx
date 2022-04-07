@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import {Container, Stack, useColorModeValue, useControllableState} from '@chakra-ui/react';
 import Personal from '../dashboard/components/body/components/personal';
 import JobDescription from './components/jobDescription/jobDescription';
+import React from 'react';
 
 
 const Jobs = () => {
@@ -28,7 +29,6 @@ const Jobs = () => {
         <>
             <Sidebar isOpen={sideBarOpen} onClose={() => setSideBarOpen(!sideBarOpen)} />
             <Header onBurgerClick={() => setSideBarOpen(!sideBarOpen)}></Header>
-            const MotionContainer = motion(Container);
             <MotionStack
                 backgroundColor={useColorModeValue('white', '#222')}
                 as={Stack}

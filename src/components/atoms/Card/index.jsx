@@ -65,6 +65,8 @@ Card.propTypes = {
     subtitle: PropTypes.string,
     dates: PropTypes.string,
     place: PropTypes.string,
+    gitHub: PropTypes.string, 
+    site: PropTypes.string
 };
 
 export default Card;

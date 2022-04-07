@@ -2,8 +2,9 @@ import BubbleList from '../../../../components/components/BubbleList/bubbleList'
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Container, Text, Flex } from '@chakra-ui/layout';
-import { useColorMode, useColorModeValue } from '@chakra-ui/color-mode';
-import { Grid, Box } from '@chakra-ui/layout';
+import {  useColorModeValue } from '@chakra-ui/color-mode';
+import { Grid } from '@chakra-ui/layout';
+import React from 'react';
 
 const JobDescription = () => {
     const list = [

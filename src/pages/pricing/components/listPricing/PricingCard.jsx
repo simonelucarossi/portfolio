@@ -12,6 +12,7 @@ import {
   import * as React from 'react'
   import { HiCheckCircle } from 'react-icons/hi'
   import { Card } from './Card'
+import PropTypes from 'prop-types';
   
   export const PricingCard = (props) => {
     const { data, icon, button, ...rest } = props
@@ -51,5 +52,14 @@ import {
         {button}
       </Card>
     )
+  }
+
+  PricingCard.propTypes = {
+    data: PropTypes.object,
+    icon: PropTypes.object,
+    button: PropTypes.object,
+    features: PropTypes.string,
+    price: PropTypes.number,
+    name: PropTypes.string,
   }
   

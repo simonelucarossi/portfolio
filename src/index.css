@@ -116,3 +116,210 @@ code {
     overflow: hidden;
     transform: translateY(-50%);    
 }
+
+.test-card-projects {
+  width: 100%;
+  min-height: 400px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.4;
+  -webkit-transition: opacity 0.6s ease-in;
+  -moz-transition: opacity 0.6s ease-in;
+  -ms-transition: opacity 0.6s ease-in;
+  -o-transition: opacity 0.6s ease-in;
+  transition: opacity 0.6s ease-in, transform 0.6s;
+}
+
+.test-card-projects:hover {
+  box-shadow: 0px 0px 0px 0.3px gray;
+  opacity: 0.9;
+  cursor: pointer;
+  transform: scale(1.02);
+}
+
+.test__card-project-title {
+  opacity: 0;
+  font-size: 22px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  border-radius: 8px;
+  -webkit-transition: opacity 0.6s ease-in;
+  -moz-transition: opacity 0.6s ease-in;
+  -ms-transition: opacity 0.6s ease-in;
+  -o-transition: opacity 0.6s ease-in;
+  transition: opacity 0.6s ease-in;
+}
+
+.test__card-project-title:hover {
+  opacity: 1;
+}
+
+.test__card-project-title-container {
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.section_title {
+  width: 100%;
+}
+
+.test-title-whoami {
+  font-size: 3rem;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  padding: 10px;
+  margin: 2rem 0 2rem 0;
+  background-color: black;
+  color: white;
+  width: fit-content;
+}
+
+.test-title-whoami span {
+  border-right: .08em solid;
+  animation: caret 1s steps(1) infinite;
+}
+
+@keyframes caret {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.services__service_container {
+  padding: 2rem;
+  width: 100%;
+  border-radius: 10px;
+  background-color: white;
+  border: 1px solid #ef6f6f45;
+  background-size: cover;
+  position: relative;
+  border-top: 4px solid #ef6f6f;
+}
+
+.services__service_category_title {
+  color: black;
+  font-size: 2.3rem;
+  font-weight: 600;
+  padding-bottom: 1rem;
+  text-align: center;
+  margin-top: 5rem
+}
+
+.services__service_category_icon {
+  font-size: 9rem;
+    margin: 4rem 0rem 4rem 0rem;
+    padding: 2.65rem;
+    color: white;
+    border-radius: 20rem;
+    position: absolute;
+    top: -90px;
+    background: #4a80bb;
+    border-bottom-style: inherit;
+  }
+  
+  .toogle-down-container {
+    display: flex;
+    justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.services__service_category_price {
+  font-size: 2.5rem;
+  background-color: #ef6f6f;
+  font-weight: 500;
+  padding: .8rem;
+  margin-top: 1rem;
+  border-radius: .5rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.services__service_category_price::before {
+  content: '$';
+  padding-right: .5rem;
+}
+.mouse {
+  width: 2.5rem;
+  height: 5rem;
+  border: 2px solid #ef6f6f;
+  border-radius: 2rem;
+  display: flex;
+}
+
+.mouse span {
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  background-color: #ef6f6f;
+  border-radius: 2rem;
+  margin: auto;
+  animation: mouse-animation linear 1.2s infinite;
+}
+
+.arrow span {
+  width: 1rem;
+  height: 1rem;
+  margin-top: .5rem;
+  margin-left: .25rem;
+  border-bottom: 2px solid #ef6f6f;
+  border-right: 2px solid #ef6f6f;
+  transform: rotate(45deg);
+  display: block;
+  animation: arrow-animation alternate .7s infinite;
+}
+
+@keyframes mouse-animation {
+  0% {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(1rem);
+  }
+}
+
+@keyframes arrow-animation {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.test-timeline {
+  padding-top: 5rem;
+  padding-left: 19vw;
+  padding-right: 19vw;
+  padding-bottom: 5rem;
+
+  height: auto;
+  background-color: #4a80bb;
+}
+
+.vertical-timeline-element--work .vertical-timeline-element-content {
+  border-top: 4px solid #ef6f6f;
+}
+
+.vertical-timeline-element-date {
+    font-size: 1.5rem !important;
+    color: white;
+}
+
+.react-scrolltop-button:hover {
+  opacity: 1 !important;
+}
+
+.counter-value::after {
+  content: '+';
+}

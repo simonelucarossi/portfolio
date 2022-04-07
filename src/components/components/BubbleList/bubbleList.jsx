@@ -1,4 +1,6 @@
-
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
+import React from 'react';
 import {Flex, Image, useColorModeValue, Box } from '@chakra-ui/react';
 import { AnimateSharedLayout, motion } from 'framer-motion';
 

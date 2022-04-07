@@ -35,6 +35,7 @@ Button.propTypes = {
     width: PropTypes.number,
     height: PropTypes.number,
     borderColor: PropTypes.string,
+    icon: PropTypes.object,
 };
 
 export default Button;

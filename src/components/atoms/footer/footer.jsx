@@ -1,12 +1,10 @@
+
+import React from 'react';
 import { Box,
-  chakra,
-  Image,
   Container,
-  Link,
   Stack,
   Text,
-  useColorModeValue,
-  VisuallyHidden } from '@chakra-ui/react';
+  useColorModeValue } from '@chakra-ui/react';
   import { RiCodeSSlashLine } from 'react-icons/ri';
 import { SocialMediaLinks } from './components/SocialMediaLinks';
 
@@ -15,7 +13,7 @@ const Footer = () => {
     <Box
       bg={useColorModeValue('white', '#222')}
       color={useColorModeValue('gray.700', 'gray.200')}
-      position="fixed"
+      position="absolute"
       bottom="0"
       width="100%"
       borderTop={1}

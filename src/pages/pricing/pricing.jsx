@@ -3,7 +3,7 @@ import Header from '../../components/atoms/header';
 import Sidebar from '../../components/atoms/sidebar';
 import Footer from '../../components/atoms/footer/footer';
 import { motion } from "framer-motion"
-import {Container, Stack, useColorModeValue, Box} from '@chakra-ui/react';
+import {Container, Stack, useColorModeValue} from '@chakra-ui/react';
 import Personal from '../dashboard/components/body/components/personal';
 import ListPricingCard from './components/listPricing/ListPricingCard';
 

@@ -1,7 +1,8 @@
+import React from "react";
+import PropTypes from 'prop-types';
+
 import {
-    Box,
     Container,
-    Button,
     Drawer,
     DrawerOverlay,
     DrawerCloseButton,
@@ -15,10 +16,9 @@ import {
     useColorMode,
   } from '@chakra-ui/react';
   import { RiCodeSSlashLine } from 'react-icons/ri';
-import { useHistory } from 'react-router';
 
   
-  const SidebarContent = ({ onClick, colorMode }) => {
+  const SidebarContent = () => {
     
 
 
@@ -29,8 +29,8 @@ import { useHistory } from 'react-router';
     )
   };
   
-  const Sidebar = ({ isOpen, variant, onClose }) => {
-    const { colorMode, toggleColorMode } = useColorMode();
+  const Sidebar = ({ isOpen, onClose }) => {
+    const { colorMode } = useColorMode();
     return (
       <Drawer isOpen={isOpen} placement="left">
         <DrawerOverlay>
@@ -62,6 +62,17 @@ import { useHistory } from 'react-router';
       </Drawer>
     )
   };
+
+  Sidebar.propTypes = {
+    isOpen: PropTypes.bool,
+    variant: PropTypes.string,
+    onClose: PropTypes.func,
+  }
   
+  SidebarContent.propTypes = {
+    onClick: PropTypes.func,
+    colorMode: PropTypes.object
+  }
+
   export default Sidebar;
   

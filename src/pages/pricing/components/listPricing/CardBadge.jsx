@@ -1,6 +1,8 @@
 import { Flex, Text, useColorModeValue } from '@chakra-ui/react'
 import * as React from 'react'
 
+import PropTypes from 'prop-types';
+
 const CardBadge = (props) => {
   const { children, ...flexProps } = props
   return (
@@ -29,5 +31,9 @@ const CardBadge = (props) => {
     </Flex>
   )
 };
+
+CardBadge.propTypes = {
+  children: PropTypes.object,
+}
 
 export default CardBadge;

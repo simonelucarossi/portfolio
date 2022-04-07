@@ -1,6 +1,7 @@
 import { Box, useColorModeValue } from '@chakra-ui/react';
 import * as React from 'react';
 import CardBadge from './CardBadge';
+import PropTypes from 'prop-types';
 
 export const Card = (props ) => {
   const { children, isPopular, ...rest } = props
@@ -22,4 +23,9 @@ export const Card = (props ) => {
       {children}
     </Box>
   )
+}
+
+Card.propTypes = {
+  children: PropTypes.object, 
+  isPopular: PropTypes.bool,
 }

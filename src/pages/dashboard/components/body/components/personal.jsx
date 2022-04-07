@@ -1,10 +1,10 @@
-import {Container, Button, Image, Flex, useColorModeValue, Heading, Box, Grid} from '@chakra-ui/react';
+import {Container, Button, Flex, useColorModeValue, Heading, Box} from '@chakra-ui/react';
 import { FaFacebook, FaGithub, FaLinkedin, FaMailBulk, FaTwitter } from 'react-icons/fa';
-import { motion } from "framer-motion"
 import NavigationBar from '../../../../../components/atoms/navigationBar';
+import PropTypes from 'prop-types';
+import React from 'react';
 
 const Personal = ({navigationObjects, toVisisbleSocial = true}) => {
-    const MotionImage = motion(Image);
     return (
         <>
             <Container
@@ -39,18 +39,6 @@ const Personal = ({navigationObjects, toVisisbleSocial = true}) => {
                 <Heading fontSize="32px" fontFamily="initial" textAlign={{ base: 'center', lg: 'left'}} color={useColorModeValue('black', '#d9d9d9')} >Simone Luca Rossi</Heading>
                 <Heading fontSize="19px" fontFamily="serif" textAlign={{ base: 'center', lg: 'left'}} color={useColorModeValue('#979797', '#817c7c')}>🖥️ Full-stack Web Developer</Heading>
             </Container>
-            <MotionImage
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 1.0 }} 
-                src="https://s3.amazonaws.com/keybase_processed_uploads/aa692e9bb78aa0e7c8803a0e515d3e05_360_360.jpg"
-                fallbackSrc="https://via.placeholder.com/150"
-                boxSize={"130px"}
-                borderRadius="full"
-                border={1}
-                borderColor={useColorModeValue('black', '#d9d9d9')}
-                borderStyle={'solid'}
-                marginBottom="10px"
-            />
             {
                 toVisisbleSocial === true && (
                     <Box
@@ -97,5 +85,10 @@ const Personal = ({navigationObjects, toVisisbleSocial = true}) => {
         </>
     )
 };
+
+Personal.propTypes = {
+    navigationObjects: PropTypes.object,
+    toVisisbleSocial: PropTypes.bool,
+}
 
 export default Personal;

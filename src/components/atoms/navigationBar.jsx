@@ -1,3 +1,5 @@
+import React from "react";
+import PropTypes from 'prop-types';
 import {
     Breadcrumb,
     BreadcrumbItem,
@@ -5,7 +7,6 @@ import {
     useColorModeValue,
     Flex,
     Text,
-    Icon,
     keyframes,
     Container,
   usePrefersReducedMotion,
@@ -31,9 +32,9 @@ import {
             <FiLink2 color={colorDivider} fontSize={20} style={{ marginTop: "4px", marginRight: '15px'}}/>
             <Breadcrumb spacing="8px" separator={<FiChevronRight color={colorDivider} />}>
                 {
-                    items.map((item) => {
+                    items.map((item, index) => {
                         return (
-                            <BreadcrumbItem color="black" bg={backgroundColorDivider} borderRadius={0} isCurrentPage={item.isCurrentPage}>
+                            <BreadcrumbItem key={index} color="black" bg={backgroundColorDivider} borderRadius={0} isCurrentPage={item.isCurrentPage}>
                                 <MotionLinkNavigatior 
                                     href={item.path} 
                                     opacity={item.isCurrentPage ? 1.0 : 1.0}
@@ -58,6 +59,10 @@ import {
             
         </Flex>
       )
+  }
+
+  NavigationBar.propTypes = {
+      items: PropTypes.array,
   }
 
   export default NavigationBar;

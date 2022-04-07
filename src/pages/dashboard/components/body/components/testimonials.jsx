@@ -1,4 +1,6 @@
-import { ReactNode } from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
+
 import {
   Box,
   Flex,
@@ -87,13 +89,39 @@ const TestimonialAvatar = ({
 export default function WithSpeechBubbles() {
   return (
     <Box >
+      <Flex
+                            direction={'column'}
+                            alignItems={'center'}
+                        >
+                            <Text
+                                fontSize={17}
+                                fontWeight={500}
+                                mb={-2}
+                                color={'lightgray'}
+                            >
+                                I WORKED WITH MANY COMPANIES    
+                            </Text>
+                            <Text
+                                fontSize={26}
+                                fontWeight={600}
+                                mb={1}
+                            >
+                              TESTIMONIALS    
+                            </Text>
+                            <div 
+                                className="section-title-divider"
+                                style={{
+                                    width: '6vw',
+                                    height: '4px',
+                                    borderRadius: '5px',
+                                    backgroundColor: '#ef6f6f',
+                                    marginBottom: '25px'
+                                }}
+                            />
+                        </Flex>
       <Container bg={useColorModeValue('#f9f8f8ab', '#2c2c2c')} maxWidth={{ base: '95%', md: '70%', lg: '60%' }} py={12} as={Stack} spacing={12} rounded="xl" marginBottom="25px"
         boxShadow={useColorModeValue("0px 0px 5px #979797d1", "0px 0px 5px #00000040")}
         >
-        <Stack spacing={0} align={'center'}>
-          <Heading>📢 My Clients Speak 📢</Heading>
-          <Text fontFamily="MenloMy" pt="2px">I have been working with clients around the world</Text>
-        </Stack>
         <Stack
           direction={{ base: 'column', md: 'row' }}
           spacing={{ base: 10, md: 4, lg: 10 }}>
@@ -149,4 +177,39 @@ export default function WithSpeechBubbles() {
       </Container>
     </Box>
   );
+}
+
+TestimonialAvatar.propTypes = {
+  children: PropTypes.object,
+  src: PropTypes.string,
+  name: PropTypes.string,
+  title: PropTypes.string,
+}
+
+TestimonialHeading.propTypes = {
+  children: PropTypes.object,
+  src: PropTypes.string,
+  name: PropTypes.string,
+  title: PropTypes.string,
+}
+
+TestimonialText.propTypes = {
+  children: PropTypes.object,
+  src: PropTypes.string,
+  name: PropTypes.string,
+  title: PropTypes.string,
+}
+
+TestimonialContent.propTypes = {
+  children: PropTypes.object,
+  src: PropTypes.string,
+  name: PropTypes.string,
+  title: PropTypes.string,
+}
+
+Testimonial.propTypes = {
+  children: PropTypes.object,
+  src: PropTypes.string,
+  name: PropTypes.string,
+  title: PropTypes.string,
 }
